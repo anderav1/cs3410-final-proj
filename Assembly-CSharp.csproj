@@ -47,16 +47,17 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.11</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.12</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2019.4.29f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CarInputHandler.cs" />
-    <Compile Include="Assets\Scripts\SkidMarkRendererHandler.cs" />
-    <Compile Include="Assets\Scripts\SmokeEmissionHandler.cs" />
-    <Compile Include="Assets\Scripts\TopDownCarController.cs" />
+    <Compile Include="Assets\CameraController.cs" />
+    <Compile Include="Assets\CarInputHandler.cs" />
+    <Compile Include="Assets\GameController.cs" />
+    <Compile Include="Assets\SkidMarkRendererHandler.cs" />
+    <Compile Include="Assets\TopDownCarController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Karting\Art\Fonts\ApacheLicense2.0.txt" />
@@ -271,9 +272,6 @@
     </Reference>
     <Reference Include="System.Interactive.Async">
       <HintPath>Library\PackageCache\com.unity.ml-agents@1.0.8\Plugins\ProtoBuffer\System.Interactive.Async.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -656,9 +654,6 @@
     <Reference Include="Unity.InteractiveTutorials.Core">
       <HintPath>Library\ScriptAssemblies\Unity.InteractiveTutorials.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VectorGraphics">
-      <HintPath>Library\ScriptAssemblies\Unity.VectorGraphics.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.InternalAPIEditorBridgeDev.001">
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridgeDev.001.dll</HintPath>
     </Reference>
@@ -671,8 +666,8 @@
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.003">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.003.dll</HintPath>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -712,9 +707,6 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VectorGraphics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VectorGraphics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Barracuda.BurstBLAS">
       <HintPath>Library\ScriptAssemblies\Unity.Barracuda.BurstBLAS.dll</HintPath>
@@ -760,9 +752,6 @@
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEngineBridge.003">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.003.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>

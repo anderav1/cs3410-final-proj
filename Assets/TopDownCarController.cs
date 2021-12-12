@@ -9,8 +9,11 @@ public class TopDownCarController : MonoBehaviour
     public float accelerationFactor = 30.0f;
     public float turnFactor = 3.5f;
     public float minTurnSpeedFactor = 8f;
-    public float maxSpeed = 20.0f;
+    public float maxRoadSpeed = 20.0f;
+    public float offroadSpeed = 15.0f;
     public float driftSpeed = 4.0f;
+
+    private float maxSpeed;
 
     private float accelerationInput = 0;
     private float steeringInput = 0;
@@ -18,17 +21,21 @@ public class TopDownCarController : MonoBehaviour
     private float velocityVsUp = 0;
 
     private Rigidbody2D rb2d;
+    public GameController gameController;
 
     // Start is called before the first frame update
     void Start()
     {
+        maxSpeed = maxRoadSpeed;
+
         rb2d = GetComponent<Rigidbody2D>();
+        rotationAngle = rb2d.rotation;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void FixedUpdate()
@@ -109,5 +116,39 @@ public class TopDownCarController : MonoBehaviour
     {
         steeringInput = input.x;
         accelerationInput = input.y;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Track"))
+        {
+            //rb2d.drag += offroadDrag;
+            maxSpeed = offroadSpeed;
+            Debug.Log("Going off road");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Track"))
+        {
+            //rb2d.drag -= offroadDrag;
+            maxSpeed = maxRoadSpeed;
+            Debug.Log("Got back on road");
+
+            // erase warning message
+            gameController.DisplayWarningText(false);
+        } else if (collision.CompareTag("FinishLine"))
+        {
+
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Boundary"))
+        {
+            gameController.DisplayWarningText(true);
+        }
     }
 }

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SkidMarkRendererHandler : MonoBehaviour
 {
-    TopDownCarController carController;
+    public TopDownCarController carController;
     TrailRenderer trailRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        carController = GetComponent<TopDownCarController>();
+        //carController = GetComponent<TopDownCarController>();
         trailRenderer = GetComponent<TrailRenderer>();
         trailRenderer.emitting = false;
     }
@@ -18,6 +18,7 @@ public class SkidMarkRendererHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // render trail if tires are skidding
         if (carController.IsTireSkidding(out float lateralVelocity, out bool isBraking))
             trailRenderer.emitting = true;
         else trailRenderer.emitting = false;
