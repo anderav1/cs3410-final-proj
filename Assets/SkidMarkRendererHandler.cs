@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿// Lexi Anderson
+// Last modified: Dec 12, 2021
+// CS 3410 Final Project
+// SkidMarkRendererHandler -- Render skid marks upon drifting and braking
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

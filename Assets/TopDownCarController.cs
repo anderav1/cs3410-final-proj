@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿// Lexi Anderson
+// Last modified: Dec 12, 2021
+// CS 3410 Final Project
+// TopDownCarController -- control car movement and collisions
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,13 +36,7 @@ public class TopDownCarController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         rotationAngle = rb2d.rotation;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    
     void FixedUpdate()
     {
         ApplyEngineForce();
@@ -112,6 +111,12 @@ public class TopDownCarController : MonoBehaviour
         return false;
     }
 
+    // Get the magnitude of the car's velocity
+    public float GetVelocityMag()
+    {
+        return rb2d.velocity.magnitude;
+    }
+
     public void SetInputVector(Vector2 input)
     {
         steeringInput = input.x;
@@ -136,11 +141,11 @@ public class TopDownCarController : MonoBehaviour
             maxSpeed = maxRoadSpeed;
             Debug.Log("Got back on road");
 
-            // erase warning message
+            // clear warning message
             gameController.DisplayWarningText(false);
         } else if (collision.CompareTag("FinishLine"))
         {
-
+            gameController.OnCrossFinishLine();
         }
     }
 
