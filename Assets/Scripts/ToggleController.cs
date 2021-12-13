@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿// Lexi Anderson
+// Last modified Dec 12, 2021
+// CS 3410 Final Project -- Obstacle Course Race
+// ToggleController -- toggle audio on and off
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

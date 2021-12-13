@@ -1,4 +1,6 @@
 ﻿// Lexi Anderson
+// Last modified Dec 12, 2021
+// CS 3410 Final Project -- Obstacle Course Race
 // MenuController -- Handle button click events in Menu scene
 
 using System.Collections;
