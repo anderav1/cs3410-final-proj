@@ -4,7 +4,7 @@ Lexi Anderson
 CS 3410 Final Project
 
 ## Overview
-This is a basic 2D topdown racing game. The player drives a car around the track to try to improve their lap time. Driving off the track into the grass will slow down the car significantly, so players should try to steer carefully and accurately.
+This is a basic 2D topdown racing game. The player drives a car one lap around the track with the goal of minimizing their lap time. Driving off the track into the grass will slow down the car significantly, so players should try to steer carefully and accurately.
 
 
 ## Controls
