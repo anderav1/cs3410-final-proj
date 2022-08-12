@@ -53,15 +53,15 @@
     <UnityVersion>2019.4.29f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\CameraController.cs" />
-    <Compile Include="Assets\CarInputHandler.cs" />
-    <Compile Include="Assets\CarSFXHandler.cs" />
-    <Compile Include="Assets\GameController.cs" />
-    <Compile Include="Assets\MenuController.cs" />
-    <Compile Include="Assets\MusicManager.cs" />
-    <Compile Include="Assets\SkidMarkRendererHandler.cs" />
-    <Compile Include="Assets\ToggleController.cs" />
-    <Compile Include="Assets\TopDownCarController.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\CarInputHandler.cs" />
+    <Compile Include="Assets\Scripts\CarSFXHandler.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\MenuController.cs" />
+    <Compile Include="Assets\Scripts\MusicManager.cs" />
+    <Compile Include="Assets\Scripts\SkidMarkRendererHandler.cs" />
+    <Compile Include="Assets\Scripts\ToggleController.cs" />
+    <Compile Include="Assets\Scripts\TopDownCarController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Karting\Art\Fonts\ApacheLicense2.0.txt" />
